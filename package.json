@@ -6,20 +6,40 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@next/font": "^14.2.15",
+    "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.3"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^15.5.0",
+    "@types/jest": "^29.7.0",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.0.12",
     "@types/react-dom": "^19",
+    "cypress": "^14.2.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
-    "@eslint/eslintrc": "^3"
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.8.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"]
   }
 }
